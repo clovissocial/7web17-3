@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTIPLYING NUMBERS BY TWO</title>
+</head>
+<body>
+    <script>
+
+
+    //USING THE WHILE LOOP FOR MULTIPLYING NUMBERS BY 2
+        // let operand = 2;
+        // let count = 1;
+
+        // while(count<=12) {
+        //     console.log(operand+ "x" +count + " = " + count*operand);
+        //     count++;
+        // }
+        
+        // ============ USING THE FOR LOOP MRTHOD IS BELOW ============= //
+
+  
+
+
+        
+    //USING THE FOR LOOP FOR MULTIPLYING NUMBERS BY 2
+    // let counter = 1;
+
+    //     for(let i=2; counter<=12; counter++) {
+    //         console.log(i+ "x" +counter + " = " + counter*i);
+    //     }
+
+
+
+function tableGenerator () {
+    var myVar  = prompt("A number?", "");
+    var myString = "";
+    for (i=1; i<=10; i++) {
+        myString += myVar+ " x " +i+ " = " +(i*myVar)+ "\n";            
+    }
+
+    console.log(myString);
+}
+
+
+
+
+var result = 'x\t';
+for(var i=0; i<10; i++) {
+    for (var j=0; j<10; j++) {
+         if (i==0 && j>0) {
+            result += '['+ j +']' + '\t';
+         }
+
+         else if (j==0 && i>0) {
+            result += '['+ i +']' + '\t';
+         }
+
+         if (i>0 && j>0) {
+            result += (i*j) + '\t';
+        }}
+
+        result += '\n';
+}
+
+ console.log(result);
+
+// const sqaure = function(x) {
+// return x*x;
+// }
+// console.log(sqaure(12));
+
+
+const makeNoise = function(){
+    console.log("Pling!");
+}
+makeNoise();
+
+// const power = function(base, exponent){
+//     let result = 1;
+//     for (let count = 0; count < exponent; count++){
+//         result *=base;
+//     }
+//     return result;
+// };
+// console.log(power(2, 10));
+
+
+
+
+const hummus = function(factor) {
+    const ingredient = function(amount, unit, name){
+            let ingredientAmount = amount * factor; 
+        if (ingredientAmount > 1){
+            unit += 's'; 
+                } 
+            console.log(`${ingredientAmount} ${unit} ${name}`); } 
+                ingredient(1, 'can', 'tahini');
+                ingredient(2, 'tablespoon', 'olive oil');
+                }
+                hummus(2);
+
+
+
+                
+ let launchmissile = function() {
+    console.log("Launching a misssile");
+ }
+
+ if(true) {
+    launchmissile = function() {}
+ }
+ launchmissile();
+ 
+
+
+
+// function greet (who) {
+//     console.log("Hello" + who);
+// }
+// greet(' Harry ');
+// console.log("Bye");
+
+
+const minus = (a,b) => {
+    if (b === undefined) 
+    return -a;
+    else return a-b;
+}
+console.log(4);
+console.log(minus(8, 2));
+
+
+
+//========== Function Closure ==========//
+const wrapValue = (n) => {
+    let local = n;
+    return () => local;
+}
+
+let wrap1 = wrapValue(1);
+let wrap2 = wrapValue(2);
+
+console.log(wrap1());
+console.log(wrap2());
+
+
+
+//function closure example 2    {}
+
+function multiplier (factor)  {
+    return number => number*factor;
+}
+
+let twice = multiplier(2);
+console.log(twice(5));
+
+
+
+
+// function closure example 3
+// const add = (a, b) => a+b;
+// const add10 = partialApply (add, 10) ;
+// add10(5);
+
+
+
+
+
+//=========== function recursion ==========//
+
+function power (base, exponent) {
+    if(exponent == 0) {
+        return 1;
+    }
+
+    else {
+        return base * power(base, exponent -1); 
+    }
+}
+
+console.log(power(2, 3))
+    </script>
+
+    <!-- <a href="javascript:tableGenerator()">Click here to create a new multiplication table</a>  -->
+</body>
+</html>
